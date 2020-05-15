@@ -10,18 +10,38 @@ import Foundation
 
 public struct Api {
 
-    func films(completion: @escaping (Result<[Film], Error>) -> Void) {
+    let network: Network
 
-        Network().fetch(group: Film.path) { result in
+    init(baseUrl: URL = URL(string: "https://swapi.dev/api")!) {
+        self.network = Network(baseUrl: baseUrl)
+    }
 
-            switch result {
-            case .success(let json):
-                let films: [Film] = Utils.listObjects(json: json)
-                completion(.success(films))
+    //    func films(completion: @escaping (Result<[Film], Error>) -> Void) {
+//
+//        Network().fetch(group: Film.path) { result in
+//
+//            switch result {
+//            case .success(let json):
+//                let films: [Film] = Utils.listObjects(json: json)
+//                completion(.success(films))
+//
+//            case .failure(let error):
+//                completion(.failure(error))
+//            }
+//        }
+//    }
 
-            case .failure(let error):
-                completion(.failure(error))
-            }
+    func film(id: Identifier, completion: @escaping (Result<RawFilm, Error>) -> Void) {
+
+        self.network.fetch(item: id) { result in
+            completion(result)
+        }
+    }
+
+    func countFilms(completion: @escaping (Result<Int, Error>) -> Void) {
+
+        self.network.count(subPath: RawFilm.subPath) { result in
+            completion(result)
         }
     }
 

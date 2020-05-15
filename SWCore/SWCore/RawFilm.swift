@@ -1,5 +1,5 @@
 //
-//  Films.swift
+//  RawFilm.swift
 //  SWCore
 //
 //  Created by Ben Staveley-Taylor on 14/05/2020.
@@ -8,23 +8,32 @@
 
 import Foundation
 
-public struct RawFilm {
-
-    static let path = "films"
+public struct RawFilm: Codable {
 
     let title: String
-    let episode_id: Int
-    let opening_crawl: String
+    let episodeId: Int                  // JSON: episode_id
+    let openingCrawl: String            // JSON: opening_crawl
     let director: String
     let producer: String
-    let release_date: Date
-    let characters: Identifiers
-    let planets: Identifiers
-    let starships: Identifiers
-    let vehicles: Identifiers
-    let species: Identifiers
+    let releaseDate: Date               // JSON: release_date
+    let characters: [URL]
+    let planets: [URL]
+    let starships: [URL]
+    let vehicles: [URL]
+    let species: [URL]
+    // Not modelling: created
+    // Not modelling: edited
+    // Not modelling: url
+}
 
-    init(json: JsonObject) {
+extension RawFilm: Fetchable {
+    static var subPath = "films"
+}
+
+
+
+/*
+ init(json: JsonObject) {
 
         self.title = json["title"] as? String ?? ""
         self.episode_id = json["episode_id"] as? Int ?? 0
@@ -68,4 +77,5 @@ public struct RawFilm {
         }
         self.species = speciesIds ?? []
     }
-}
+ */
+

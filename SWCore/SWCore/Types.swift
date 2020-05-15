@@ -10,3 +10,9 @@ import Foundation
 
 public typealias Identifier = Int
 public typealias Identifiers = [Identifier]
+
+protocol Fetchable {
+
+    // resource sub path, to append to base URL
+    static var subPath: String { get }
+}

@@ -10,12 +10,13 @@
 		6B02B7DC246D9440008B2A5F /* SWCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B02B7D2246D9440008B2A5F /* SWCore.framework */; };
 		6B02B7E1246D9440008B2A5F /* SWCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B02B7E0246D9440008B2A5F /* SWCoreTests.swift */; };
 		6B02B7E3246D9440008B2A5F /* SWCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B02B7D5246D9440008B2A5F /* SWCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6B02B7ED246D95A6008B2A5F /* Films.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B02B7EC246D95A6008B2A5F /* Films.swift */; };
+		6B02B7ED246D95A6008B2A5F /* RawFilm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B02B7EC246D95A6008B2A5F /* RawFilm.swift */; };
 		6B02B7EF246D95B2008B2A5F /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B02B7EE246D95B2008B2A5F /* People.swift */; };
 		6B02B7F1246D9ACB008B2A5F /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B02B7F0246D9ACB008B2A5F /* Types.swift */; };
 		6B02B7F3246D9C3E008B2A5F /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B02B7F2246D9C3E008B2A5F /* Network.swift */; };
 		6B02B7F5246D9C61008B2A5F /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B02B7F4246D9C61008B2A5F /* Api.swift */; };
 		6B02B7F7246DAC19008B2A5F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B02B7F6246DAC19008B2A5F /* Utils.swift */; };
+		6BA7CD87246EDA14009A2B4F /* RawContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA7CD86246EDA14009A2B4F /* RawContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +36,13 @@
 		6B02B7DB246D9440008B2A5F /* SWCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SWCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B02B7E0246D9440008B2A5F /* SWCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWCoreTests.swift; sourceTree = "<group>"; };
 		6B02B7E2246D9440008B2A5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6B02B7EC246D95A6008B2A5F /* Films.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Films.swift; sourceTree = "<group>"; };
+		6B02B7EC246D95A6008B2A5F /* RawFilm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawFilm.swift; sourceTree = "<group>"; };
 		6B02B7EE246D95B2008B2A5F /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		6B02B7F0246D9ACB008B2A5F /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		6B02B7F2246D9C3E008B2A5F /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		6B02B7F4246D9C61008B2A5F /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		6B02B7F6246DAC19008B2A5F /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		6BA7CD86246EDA14009A2B4F /* RawContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,11 +87,12 @@
 			children = (
 				6B02B7D5246D9440008B2A5F /* SWCore.h */,
 				6B02B7D6246D9440008B2A5F /* Info.plist */,
-				6B02B7EC246D95A6008B2A5F /* Films.swift */,
-				6B02B7EE246D95B2008B2A5F /* People.swift */,
-				6B02B7F0246D9ACB008B2A5F /* Types.swift */,
-				6B02B7F2246D9C3E008B2A5F /* Network.swift */,
 				6B02B7F4246D9C61008B2A5F /* Api.swift */,
+				6B02B7F2246D9C3E008B2A5F /* Network.swift */,
+				6B02B7EE246D95B2008B2A5F /* People.swift */,
+				6BA7CD86246EDA14009A2B4F /* RawContainer.swift */,
+				6B02B7EC246D95A6008B2A5F /* RawFilm.swift */,
+				6B02B7F0246D9ACB008B2A5F /* Types.swift */,
 				6B02B7F6246DAC19008B2A5F /* Utils.swift */,
 			);
 			path = SWCore;
@@ -218,7 +221,8 @@
 				6B02B7EF246D95B2008B2A5F /* People.swift in Sources */,
 				6B02B7F3246D9C3E008B2A5F /* Network.swift in Sources */,
 				6B02B7F5246D9C61008B2A5F /* Api.swift in Sources */,
-				6B02B7ED246D95A6008B2A5F /* Films.swift in Sources */,
+				6BA7CD87246EDA14009A2B4F /* RawContainer.swift in Sources */,
+				6B02B7ED246D95A6008B2A5F /* RawFilm.swift in Sources */,
 				6B02B7F7246DAC19008B2A5F /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

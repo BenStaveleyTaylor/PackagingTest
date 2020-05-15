@@ -10,15 +10,25 @@ import Foundation
 
 internal struct Utils {
 
-    static func date(yyyymmdd: String) -> Date? {
-
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-
-        return dateFormatter.date(from: yyyymmdd)
+    // Read dates like "1976-05-04"
+    static var yyymmddDateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+        formatter.dateFormat = "yyyy-MM-dd"
+        
+        return formatter
     }
 
+    static func commonJsonDecoder() -> JSONDecoder {
+
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        decoder.dateDecodingStrategy = .formatted(Utils.yyymmddDateFormatter)
+
+        return decoder
+    }
+
+/*
     static func identifiers(links: [String]) -> [Identifier] {
 
         let identifiers: [Identifier] = links.compactMap { link in
@@ -49,5 +59,5 @@ internal struct Utils {
         
         return []
     }
-
+*/
 }
