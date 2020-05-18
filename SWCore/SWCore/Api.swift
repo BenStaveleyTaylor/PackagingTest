@@ -8,6 +8,9 @@
 
 import Foundation
 
+// See https://swapi.dev
+//     https://swapi.dev/api/
+
 public struct Api {
 
     let network: Network
@@ -16,31 +19,86 @@ public struct Api {
         self.network = Network(baseUrl: baseUrl)
     }
 
-    //    func films(completion: @escaping (Result<[Film], Error>) -> Void) {
-//
-//        Network().fetch(group: Film.path) { result in
-//
-//            switch result {
-//            case .success(let json):
-//                let films: [Film] = Utils.listObjects(json: json)
-//                completion(.success(films))
-//
-//            case .failure(let error):
-//                completion(.failure(error))
-//            }
-//        }
-//    }
+    func countFilms(completion: @escaping (Result<Int, Error>) -> Void) {
 
-    func film(id: Identifier, completion: @escaping (Result<RawFilm, Error>) -> Void) {
+        self.network.count(subPath: CoreFilm.subPath) { result in
+            completion(result)
+        }
+    }
+
+    func film(id: Identifier, completion: @escaping (Result<CoreFilm, Error>) -> Void) {
 
         self.network.fetch(item: id) { result in
             completion(result)
         }
     }
 
-    func countFilms(completion: @escaping (Result<Int, Error>) -> Void) {
+    func countPeople(completion: @escaping (Result<Int, Error>) -> Void) {
 
-        self.network.count(subPath: RawFilm.subPath) { result in
+        self.network.count(subPath: CorePerson.subPath) { result in
+            completion(result)
+        }
+    }
+
+    func person(id: Identifier, completion: @escaping (Result<CorePerson, Error>) -> Void) {
+
+        self.network.fetch(item: id) { result in
+            completion(result)
+        }
+    }
+
+    func countPlanets(completion: @escaping (Result<Int, Error>) -> Void) {
+
+        self.network.count(subPath: CorePlanet.subPath) { result in
+            completion(result)
+        }
+    }
+
+    func planet(id: Identifier, completion: @escaping (Result<CorePlanet, Error>) -> Void) {
+
+        self.network.fetch(item: id) { result in
+            completion(result)
+        }
+    }
+
+    func countSpecies(completion: @escaping (Result<Int, Error>) -> Void) {
+
+        self.network.count(subPath: CoreSpecies.subPath) { result in
+            completion(result)
+        }
+    }
+
+    func species(id: Identifier, completion: @escaping (Result<CoreSpecies, Error>) -> Void) {
+
+        self.network.fetch(item: id) { result in
+            completion(result)
+        }
+    }
+
+    func countStarships(completion: @escaping (Result<Int, Error>) -> Void) {
+
+        self.network.count(subPath: CoreStarship.subPath) { result in
+            completion(result)
+        }
+    }
+
+    func starship(id: Identifier, completion: @escaping (Result<CoreStarship, Error>) -> Void) {
+
+        self.network.fetch(item: id) { result in
+            completion(result)
+        }
+    }
+
+    func countVehicles(completion: @escaping (Result<Int, Error>) -> Void) {
+
+        self.network.count(subPath: CoreVehicle.subPath) { result in
+            completion(result)
+        }
+    }
+
+    func vehicle(id: Identifier, completion: @escaping (Result<CoreVehicle, Error>) -> Void) {
+
+        self.network.fetch(item: id) { result in
             completion(result)
         }
     }

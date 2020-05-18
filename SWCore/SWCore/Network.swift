@@ -26,21 +26,31 @@ internal struct Network {
 
         let session = self.session()
 
-        session.dataTask(with: request) { data, response, error in
+        session.dataTask(with: request) { data, response, taskError in
 
-            if let data = data {
+            var finalError: Error?
+
+            if taskError != nil {
+                finalError = taskError
+            }
+            else if let data = data {
 
                 print("Response: \(String(data: data, encoding: .utf8)!)")
 
                 let decoder = Utils.commonJsonDecoder()
-                if let object = try? decoder.decode(T.self, from: data) {
+
+                do {
+                    let object = try decoder.decode(T.self, from: data)
                     completion(.success(object))
                     return
+                }
+                catch {
+                    finalError = error
                 }
             }
 
             // If we got here it's an error
-            completion(.failure(error ?? URLError(.unknown)))
+            completion(.failure(finalError ?? URLError(.unknown)))
 
         }.resume()
     }
@@ -63,7 +73,7 @@ internal struct Network {
                 print("Response: \(String(data: data, encoding: .utf8)!)")
 
                 let decoder = Utils.commonJsonDecoder()
-                if let object = try? decoder.decode(RawContainer.self, from: data) {
+                if let object = try? decoder.decode(CoreContainer.self, from: data) {
                     completion(.success(object.count))
                     return
                 }

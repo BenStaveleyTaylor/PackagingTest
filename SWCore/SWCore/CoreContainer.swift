@@ -1,5 +1,5 @@
 //
-//  RawContainer.swift
+//  CoreContainer.swift
 //  SWCore
 //
 //  Created by Ben Staveley-Taylor on 15/05/2020.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct RawContainer: Decodable {
+public struct CoreContainer: Decodable {
 
     let count: Int
     let next: URL?

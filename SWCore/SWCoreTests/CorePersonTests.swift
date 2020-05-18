@@ -1,15 +1,15 @@
 //
-//  SWCoreTests.swift
+//  CorePersonTests.swift
 //  SWCoreTests
 //
-//  Created by Ben Staveley-Taylor on 14/05/2020.
+//  Created by Ben Staveley-Taylor on 18/05/2020.
 //  Copyright © 2020 Oracle and/or its affiliates. All rights reserved.
 //
 
 import XCTest
 @testable import SWCore
 
-class SWCoreTests: XCTestCase {
+class CorePersonTests: XCTestCase {
 
     var api: SWCore.Api!
 
@@ -24,15 +24,15 @@ class SWCoreTests: XCTestCase {
         self.api = nil
     }
 
-    func testCountFilms() throws {
+    func testCountPeople() throws {
 
         let expectation = self.expectation(description: #function)
 
-        self.api.countFilms() { result in
+        self.api.countPeople() { result in
 
             switch result {
             case .success(let count):
-                XCTAssertEqual(count, 6)
+                XCTAssertEqual(count, 82)
                 // ...
 
             case .failure(let error):
@@ -46,18 +46,21 @@ class SWCoreTests: XCTestCase {
     }
 
 
-    func testFetchFilm() throws {
+    func testFetchPerson() throws {
 
         let expectation = self.expectation(description: #function)
 
-        self.api.film(id: 1) { result in
+        // Result of: https://swapi.dev/api/people/1/
+
+        self.api.person(id: 1) { result in
 
             switch result {
-            case .success(let film):
-                XCTAssertEqual(film.title, "A New Hope")
-                XCTAssertEqual(film.episodeId, 4)
-                XCTAssertEqual(film.director, "George Lucas")
-                XCTAssertEqual(film.characters[0].absoluteString, "http://swapi.dev/api/people/1/")
+            case .success(let person):
+                XCTAssertEqual(person.name, "Luke Skywalker")
+                XCTAssertEqual(person.hairColor, "blond")
+                XCTAssertEqual(person.birthYear, "19BBY")
+                XCTAssertEqual(person.homeworld?.absoluteString, "http://swapi.dev/api/planets/1/")
+                XCTAssertEqual(person.films?[0].absoluteString, "http://swapi.dev/api/films/1/")
                 // ...
 
             case .failure(let error):

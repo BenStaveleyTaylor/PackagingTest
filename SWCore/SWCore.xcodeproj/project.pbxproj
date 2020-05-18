@@ -8,15 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		6B02B7DC246D9440008B2A5F /* SWCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B02B7D2246D9440008B2A5F /* SWCore.framework */; };
-		6B02B7E1246D9440008B2A5F /* SWCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B02B7E0246D9440008B2A5F /* SWCoreTests.swift */; };
+		6B02B7E1246D9440008B2A5F /* CoreFilmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B02B7E0246D9440008B2A5F /* CoreFilmTests.swift */; };
 		6B02B7E3246D9440008B2A5F /* SWCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B02B7D5246D9440008B2A5F /* SWCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6B02B7ED246D95A6008B2A5F /* RawFilm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B02B7EC246D95A6008B2A5F /* RawFilm.swift */; };
-		6B02B7EF246D95B2008B2A5F /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B02B7EE246D95B2008B2A5F /* People.swift */; };
+		6B02B7ED246D95A6008B2A5F /* CoreFilm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B02B7EC246D95A6008B2A5F /* CoreFilm.swift */; };
+		6B02B7EF246D95B2008B2A5F /* CorePerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B02B7EE246D95B2008B2A5F /* CorePerson.swift */; };
 		6B02B7F1246D9ACB008B2A5F /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B02B7F0246D9ACB008B2A5F /* Types.swift */; };
 		6B02B7F3246D9C3E008B2A5F /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B02B7F2246D9C3E008B2A5F /* Network.swift */; };
 		6B02B7F5246D9C61008B2A5F /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B02B7F4246D9C61008B2A5F /* Api.swift */; };
 		6B02B7F7246DAC19008B2A5F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B02B7F6246DAC19008B2A5F /* Utils.swift */; };
-		6BA7CD87246EDA14009A2B4F /* RawContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA7CD86246EDA14009A2B4F /* RawContainer.swift */; };
+		6B34E69E2472CC37000B3501 /* CorePlanet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B34E69D2472CC37000B3501 /* CorePlanet.swift */; };
+		6B34E6A02472CC5E000B3501 /* CoreSpecies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B34E69F2472CC5E000B3501 /* CoreSpecies.swift */; };
+		6B34E6A22472CCDB000B3501 /* CoreVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B34E6A12472CCDB000B3501 /* CoreVehicle.swift */; };
+		6B34E6A42472CCE6000B3501 /* CoreStarship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B34E6A32472CCE6000B3501 /* CoreStarship.swift */; };
+		6B34E6A62472D480000B3501 /* CorePersonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B34E6A52472D480000B3501 /* CorePersonTests.swift */; };
+		6B34E6A82472D48F000B3501 /* CorePlanetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B34E6A72472D48F000B3501 /* CorePlanetTests.swift */; };
+		6B34E6AA2472D49A000B3501 /* CoreSpeciesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B34E6A92472D49A000B3501 /* CoreSpeciesTests.swift */; };
+		6B34E6AC2472D4AA000B3501 /* CoreStarshipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B34E6AB2472D4AA000B3501 /* CoreStarshipTests.swift */; };
+		6B34E6AE2472D4B6000B3501 /* CoreVehicleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B34E6AD2472D4B6000B3501 /* CoreVehicleTests.swift */; };
+		6BA7CD87246EDA14009A2B4F /* CoreContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA7CD86246EDA14009A2B4F /* CoreContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,15 +43,24 @@
 		6B02B7D5246D9440008B2A5F /* SWCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWCore.h; sourceTree = "<group>"; };
 		6B02B7D6246D9440008B2A5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B02B7DB246D9440008B2A5F /* SWCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SWCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B02B7E0246D9440008B2A5F /* SWCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWCoreTests.swift; sourceTree = "<group>"; };
+		6B02B7E0246D9440008B2A5F /* CoreFilmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreFilmTests.swift; sourceTree = "<group>"; };
 		6B02B7E2246D9440008B2A5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6B02B7EC246D95A6008B2A5F /* RawFilm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawFilm.swift; sourceTree = "<group>"; };
-		6B02B7EE246D95B2008B2A5F /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		6B02B7EC246D95A6008B2A5F /* CoreFilm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreFilm.swift; sourceTree = "<group>"; };
+		6B02B7EE246D95B2008B2A5F /* CorePerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorePerson.swift; sourceTree = "<group>"; };
 		6B02B7F0246D9ACB008B2A5F /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		6B02B7F2246D9C3E008B2A5F /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		6B02B7F4246D9C61008B2A5F /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		6B02B7F6246DAC19008B2A5F /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		6BA7CD86246EDA14009A2B4F /* RawContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawContainer.swift; sourceTree = "<group>"; };
+		6B34E69D2472CC37000B3501 /* CorePlanet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorePlanet.swift; sourceTree = "<group>"; };
+		6B34E69F2472CC5E000B3501 /* CoreSpecies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreSpecies.swift; sourceTree = "<group>"; };
+		6B34E6A12472CCDB000B3501 /* CoreVehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreVehicle.swift; sourceTree = "<group>"; };
+		6B34E6A32472CCE6000B3501 /* CoreStarship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreStarship.swift; sourceTree = "<group>"; };
+		6B34E6A52472D480000B3501 /* CorePersonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorePersonTests.swift; sourceTree = "<group>"; };
+		6B34E6A72472D48F000B3501 /* CorePlanetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorePlanetTests.swift; sourceTree = "<group>"; };
+		6B34E6A92472D49A000B3501 /* CoreSpeciesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreSpeciesTests.swift; sourceTree = "<group>"; };
+		6B34E6AB2472D4AA000B3501 /* CoreStarshipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreStarshipTests.swift; sourceTree = "<group>"; };
+		6B34E6AD2472D4B6000B3501 /* CoreVehicleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreVehicleTests.swift; sourceTree = "<group>"; };
+		6BA7CD86246EDA14009A2B4F /* CoreContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,10 +106,14 @@
 				6B02B7D5246D9440008B2A5F /* SWCore.h */,
 				6B02B7D6246D9440008B2A5F /* Info.plist */,
 				6B02B7F4246D9C61008B2A5F /* Api.swift */,
+				6BA7CD86246EDA14009A2B4F /* CoreContainer.swift */,
+				6B02B7EC246D95A6008B2A5F /* CoreFilm.swift */,
+				6B02B7EE246D95B2008B2A5F /* CorePerson.swift */,
+				6B34E69D2472CC37000B3501 /* CorePlanet.swift */,
+				6B34E69F2472CC5E000B3501 /* CoreSpecies.swift */,
+				6B34E6A32472CCE6000B3501 /* CoreStarship.swift */,
+				6B34E6A12472CCDB000B3501 /* CoreVehicle.swift */,
 				6B02B7F2246D9C3E008B2A5F /* Network.swift */,
-				6B02B7EE246D95B2008B2A5F /* People.swift */,
-				6BA7CD86246EDA14009A2B4F /* RawContainer.swift */,
-				6B02B7EC246D95A6008B2A5F /* RawFilm.swift */,
 				6B02B7F0246D9ACB008B2A5F /* Types.swift */,
 				6B02B7F6246DAC19008B2A5F /* Utils.swift */,
 			);
@@ -101,8 +123,13 @@
 		6B02B7DF246D9440008B2A5F /* SWCoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				6B02B7E0246D9440008B2A5F /* SWCoreTests.swift */,
 				6B02B7E2246D9440008B2A5F /* Info.plist */,
+				6B02B7E0246D9440008B2A5F /* CoreFilmTests.swift */,
+				6B34E6A52472D480000B3501 /* CorePersonTests.swift */,
+				6B34E6A72472D48F000B3501 /* CorePlanetTests.swift */,
+				6B34E6A92472D49A000B3501 /* CoreSpeciesTests.swift */,
+				6B34E6AB2472D4AA000B3501 /* CoreStarshipTests.swift */,
+				6B34E6AD2472D4B6000B3501 /* CoreVehicleTests.swift */,
 			);
 			path = SWCoreTests;
 			sourceTree = "<group>";
@@ -218,12 +245,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B02B7F1246D9ACB008B2A5F /* Types.swift in Sources */,
-				6B02B7EF246D95B2008B2A5F /* People.swift in Sources */,
+				6B02B7EF246D95B2008B2A5F /* CorePerson.swift in Sources */,
 				6B02B7F3246D9C3E008B2A5F /* Network.swift in Sources */,
+				6B34E6A22472CCDB000B3501 /* CoreVehicle.swift in Sources */,
+				6B34E69E2472CC37000B3501 /* CorePlanet.swift in Sources */,
 				6B02B7F5246D9C61008B2A5F /* Api.swift in Sources */,
-				6BA7CD87246EDA14009A2B4F /* RawContainer.swift in Sources */,
-				6B02B7ED246D95A6008B2A5F /* RawFilm.swift in Sources */,
+				6BA7CD87246EDA14009A2B4F /* CoreContainer.swift in Sources */,
+				6B02B7ED246D95A6008B2A5F /* CoreFilm.swift in Sources */,
+				6B34E6A02472CC5E000B3501 /* CoreSpecies.swift in Sources */,
 				6B02B7F7246DAC19008B2A5F /* Utils.swift in Sources */,
+				6B34E6A42472CCE6000B3501 /* CoreStarship.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,7 +262,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B02B7E1246D9440008B2A5F /* SWCoreTests.swift in Sources */,
+				6B34E6AC2472D4AA000B3501 /* CoreStarshipTests.swift in Sources */,
+				6B34E6AE2472D4B6000B3501 /* CoreVehicleTests.swift in Sources */,
+				6B02B7E1246D9440008B2A5F /* CoreFilmTests.swift in Sources */,
+				6B34E6AA2472D49A000B3501 /* CoreSpeciesTests.swift in Sources */,
+				6B34E6A62472D480000B3501 /* CorePersonTests.swift in Sources */,
+				6B34E6A82472D48F000B3501 /* CorePlanetTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
