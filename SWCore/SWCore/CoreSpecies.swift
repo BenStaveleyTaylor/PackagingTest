@@ -12,18 +12,18 @@ import Foundation
 
 public struct CoreSpecies: Codable {
 
-    let name: String
-    let classification: String
-    let designation: String
-    let averageHeight: String            // JSON: average_height
-    let averageLifespan: String            // JSON: average_lifespan
-    let hairColors: String            // JSON: hair_colors
-    let skinColors: String            // JSON: skin_colors
-    let eyeColors: String            // JSON: eye_colors
-    let homeworld: URL?
-    let language: String
-    let people: [URL]?
-    let films: [URL]?
+    public let name: String
+    public let classification: String
+    public let designation: String
+    public let averageHeight: String            // JSON: average_height
+    public let averageLifespan: String            // JSON: average_lifespan
+    public let hairColors: String            // JSON: hair_colors
+    public let skinColors: String            // JSON: skin_colors
+    public let eyeColors: String            // JSON: eye_colors
+    public let homeworld: URL?
+    public let language: String
+    public let people: [URL]?
+    public let films: [URL]?
     // Not modelling: created
     // Not modelling: edited
     // Not modelling: url

@@ -1,22 +1,22 @@
 //
-//  CorePlanetTests.swift
-//  SWCoreTests
+//  PersonTests.swift
+//  SWBioResourcesTests
 //
-//  Created by Ben Staveley-Taylor on 18/05/2020.
+//  Created by Ben Staveley-Taylor on 19/05/2020.
 //  Copyright © 2020 Oracle and/or its affiliates. All rights reserved.
 //
 
 import XCTest
-import SWCore
+import SWBioResources
 
-class CorePlanetTests: XCTestCase {
+class PersonTests: XCTestCase {
 
-    var api: SWCore.Api!
+    var api: SWBioResources.Api!
 
     override func setUpWithError() throws {
 
         let testServer: URL = URL(string: "https://localhost:60993/api")!
-        self.api = SWCore.Api(baseUrl: testServer)
+        self.api = SWBioResources.Api(baseUrl: testServer)
     }
 
     override func tearDownWithError() throws {
@@ -24,15 +24,15 @@ class CorePlanetTests: XCTestCase {
         self.api = nil
     }
 
-    func testCountPlanets() throws {
+    func testCountPeople() throws {
 
         let expectation = self.expectation(description: #function)
 
-        self.api.countPlanets() { result in
+        self.api.countPeople() { result in
 
             switch result {
             case .success(let count):
-                XCTAssertEqual(count, 60)
+                XCTAssertEqual(count, 82)
                 // ...
 
             case .failure(let error):
@@ -46,22 +46,22 @@ class CorePlanetTests: XCTestCase {
     }
 
 
-    func testFetchPlanet() throws {
+    func testFetchPerson() throws {
 
         let expectation = self.expectation(description: #function)
 
-        // Result of: https://swapi.dev/api/planets/1/
+        // Result of: https://swapi.dev/api/people/2/
 
-        self.api.planet(id: 1) { result in
+        self.api.person(id: 2) { result in
 
             switch result {
-            case .success(let planet):
-                XCTAssertEqual(planet.name, "Tatooine")
-                XCTAssertEqual(planet.rotationPeriod, "23")
-                XCTAssertEqual(planet.gravity, "1 standard")
-                XCTAssertEqual(planet.surfaceWater, "1")
-                XCTAssertEqual(planet.residents?[0].absoluteString, "http://swapi.dev/api/people/1/")
-                // ...
+            case .success(let person):
+                XCTAssertEqual(person.name, "C-3PO")
+                XCTAssertEqual(person.hairColor, "n/a")
+                XCTAssertEqual(person.birthYear, "112BBY")
+                XCTAssertEqual(person.homeworld!, 1)
+                XCTAssertTrue(person.films?.contains(3) ?? false)
+                XCTAssertTrue(person.species?.contains(2) ?? false)
 
             case .failure(let error):
                 XCTFail(error.localizedDescription)

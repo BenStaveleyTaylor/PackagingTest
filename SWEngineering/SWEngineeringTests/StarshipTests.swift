@@ -1,22 +1,22 @@
 //
-//  CorePlanetTests.swift
-//  SWCoreTests
+//  StarshipTests.swift
+//  SWEngineeringTests
 //
-//  Created by Ben Staveley-Taylor on 18/05/2020.
+//  Created by Ben Staveley-Taylor on 19/05/2020.
 //  Copyright © 2020 Oracle and/or its affiliates. All rights reserved.
 //
 
 import XCTest
-import SWCore
+import SWEngineering
 
-class CorePlanetTests: XCTestCase {
+class StarshipTests: XCTestCase {
 
-    var api: SWCore.Api!
+    var api: SWEngineering.Api!
 
     override func setUpWithError() throws {
 
         let testServer: URL = URL(string: "https://localhost:60993/api")!
-        self.api = SWCore.Api(baseUrl: testServer)
+        self.api = SWEngineering.Api(baseUrl: testServer)
     }
 
     override func tearDownWithError() throws {
@@ -24,15 +24,15 @@ class CorePlanetTests: XCTestCase {
         self.api = nil
     }
 
-    func testCountPlanets() throws {
+    func testCountStarships() throws {
 
         let expectation = self.expectation(description: #function)
 
-        self.api.countPlanets() { result in
+        self.api.countStarships() { result in
 
             switch result {
             case .success(let count):
-                XCTAssertEqual(count, 60)
+                XCTAssertEqual(count, 36)
                 // ...
 
             case .failure(let error):
@@ -46,22 +46,21 @@ class CorePlanetTests: XCTestCase {
     }
 
 
-    func testFetchPlanet() throws {
+    func testFetchStarship() throws {
 
         let expectation = self.expectation(description: #function)
 
-        // Result of: https://swapi.dev/api/planets/1/
+        // Result of: https://swapi.dev/api/starships/5/
 
-        self.api.planet(id: 1) { result in
+        self.api.starship(id: 5) { result in
 
             switch result {
-            case .success(let planet):
-                XCTAssertEqual(planet.name, "Tatooine")
-                XCTAssertEqual(planet.rotationPeriod, "23")
-                XCTAssertEqual(planet.gravity, "1 standard")
-                XCTAssertEqual(planet.surfaceWater, "1")
-                XCTAssertEqual(planet.residents?[0].absoluteString, "http://swapi.dev/api/people/1/")
-                // ...
+            case .success(let starship):
+                XCTAssertEqual(starship.name, "Sentinel-class landing craft")
+                XCTAssertEqual(starship.manufacturer, "Sienar Fleet Systems, Cyngus Spaceworks")
+                XCTAssertEqual(starship.maxAtmospheringSpeed, "1000")
+                XCTAssertEqual(starship.consumables, "1 month")
+                XCTAssertTrue(starship.films?.contains(1) ?? false)
 
             case .failure(let error):
                 XCTFail(error.localizedDescription)

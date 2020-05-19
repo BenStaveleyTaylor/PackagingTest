@@ -12,20 +12,19 @@ import Foundation
 
 public struct CorePerson: Codable {
 
-    let name: String
-    let height: String
-    let mass: String
-    let hairColor: String            // JSON: hair_color
-    let skinColor: String            // JSON: skin_color
-    let eyeColor: String            // JSON: eye_color
-    let birthYear: String            // JSON: birth_year
-    let gender: String
-    let homeworld: URL?
-    let films: [URL]?
-    let planets: [URL]?
-    let starships: [URL]?
-    let vehicles: [URL]?
-    let species: [URL]?
+    public let name: String
+    public let height: String
+    public let mass: String
+    public let hairColor: String            // JSON: hair_color
+    public let skinColor: String            // JSON: skin_color
+    public let eyeColor: String            // JSON: eye_color
+    public let birthYear: String            // JSON: birth_year
+    public let gender: String
+    public let homeworld: URL?
+    public let films: [URL]?
+    public let starships: [URL]?
+    public let vehicles: [URL]?
+    public let species: [URL]?
     // Not modelling: created
     // Not modelling: edited
     // Not modelling: url

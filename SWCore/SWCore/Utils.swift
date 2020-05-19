@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal struct Utils {
+public struct Utils {
 
     // Read dates like "1976-05-04"
     static var yyymmddDateFormatter: DateFormatter {
@@ -28,36 +28,19 @@ internal struct Utils {
         return decoder
     }
 
-/*
-    static func identifiers(links: [String]) -> [Identifier] {
+    public static func identifiers(links: [URL]?) -> [Identifier]? {
+
+        guard let links = links else {
+            return nil
+        }
 
         let identifiers: [Identifier] = links.compactMap { link in
-            // Strip the number off the end
+
             // Convert "http://swapi.dev/api/people/1/" to 1
-
-            let trimmed = (link.last == "/") ? String(link.dropLast()) : link
-            let parts = trimmed.split(separator: "/")
-            if let idpart = parts.last {
-                return Int(idpart)
-            }
-
-            return nil
+            let idpart = link.lastPathComponent
+            return Int(idpart)
         }
 
         return identifiers
     }
-
-    static func listObjects<T>(json: JsonObject) -> [T] {
-        
-        if let results = json["results"] as? [JsonObject] {
-            let objects: [T] = results.compactMap { object in
-                return T(json: object)
-            }
-
-            return objects
-        }
-        
-        return []
-    }
-*/
 }

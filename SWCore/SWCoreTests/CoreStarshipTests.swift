@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import SWCore
+import SWCore
 
 class CoreStarshipTests: XCTestCase {
 

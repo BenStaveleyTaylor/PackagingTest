@@ -12,17 +12,17 @@ import Foundation
 
 public struct CoreFilm: Codable {
 
-    let title: String
-    let episodeId: Int                  // JSON: episode_id
-    let openingCrawl: String            // JSON: opening_crawl
-    let director: String
-    let producer: String
-    let releaseDate: Date               // JSON: release_date
-    let characters: [URL]?
-    let planets: [URL]?
-    let starships: [URL]?
-    let vehicles: [URL]?
-    let species: [URL]?
+    public let title: String
+    public let episodeId: Int                  // JSON: episode_id
+    public let openingCrawl: String            // JSON: opening_crawl
+    public let director: String
+    public let producer: String
+    public let releaseDate: Date               // JSON: release_date
+    public let characters: [URL]?
+    public let planets: [URL]?
+    public let starships: [URL]?
+    public let vehicles: [URL]?
+    public let species: [URL]?
     // Not modelling: created
     // Not modelling: edited
     // Not modelling: url

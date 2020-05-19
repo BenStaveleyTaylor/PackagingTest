@@ -1,22 +1,22 @@
 //
-//  CorePlanetTests.swift
-//  SWCoreTests
+//  PlanetTests.swift
+//  SWBioResourcesTests
 //
-//  Created by Ben Staveley-Taylor on 18/05/2020.
+//  Created by Ben Staveley-Taylor on 19/05/2020.
 //  Copyright © 2020 Oracle and/or its affiliates. All rights reserved.
 //
 
 import XCTest
-import SWCore
+import SWBioResources
 
-class CorePlanetTests: XCTestCase {
+class PlanetTests: XCTestCase {
 
-    var api: SWCore.Api!
+    var api: SWBioResources.Api!
 
     override func setUpWithError() throws {
 
         let testServer: URL = URL(string: "https://localhost:60993/api")!
-        self.api = SWCore.Api(baseUrl: testServer)
+        self.api = SWBioResources.Api(baseUrl: testServer)
     }
 
     override func tearDownWithError() throws {
@@ -50,7 +50,7 @@ class CorePlanetTests: XCTestCase {
 
         let expectation = self.expectation(description: #function)
 
-        // Result of: https://swapi.dev/api/planets/1/
+        // Result of: https://swapi.dev/api/planets/1
 
         self.api.planet(id: 1) { result in
 
@@ -60,8 +60,8 @@ class CorePlanetTests: XCTestCase {
                 XCTAssertEqual(planet.rotationPeriod, "23")
                 XCTAssertEqual(planet.gravity, "1 standard")
                 XCTAssertEqual(planet.surfaceWater, "1")
-                XCTAssertEqual(planet.residents?[0].absoluteString, "http://swapi.dev/api/people/1/")
-                // ...
+                XCTAssertTrue(planet.films?.contains(6) ?? false)
+                XCTAssertTrue(planet.residents?.contains(4) ?? false)
 
             case .failure(let error):
                 XCTFail(error.localizedDescription)

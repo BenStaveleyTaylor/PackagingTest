@@ -8,8 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		6B02B794246D93E4008B2A5F /* SWEngineering.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B02B78A246D93E3008B2A5F /* SWEngineering.framework */; };
-		6B02B799246D93E4008B2A5F /* SWEngineeringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B02B798246D93E4008B2A5F /* SWEngineeringTests.swift */; };
 		6B02B79B246D93E4008B2A5F /* SWEngineering.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B02B78D246D93E3008B2A5F /* SWEngineering.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B02CA772473DA2500826DC9 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B02CA762473DA2500826DC9 /* Api.swift */; };
+		6B02CA792473DC2D00826DC9 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B02CA782473DC2D00826DC9 /* Film.swift */; };
+		6B02CA7C2473DDC100826DC9 /* SWCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B02CA7B2473DDC100826DC9 /* SWCore.framework */; };
+		6B02CA832473E25000826DC9 /* FilmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B02CA822473E25000826DC9 /* FilmTests.swift */; };
+		6B02CA852473F24A00826DC9 /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B02CA842473F24A00826DC9 /* Starship.swift */; };
+		6B02CA872473F25500826DC9 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B02CA862473F25500826DC9 /* Vehicle.swift */; };
+		6B02CA8B2473F28700826DC9 /* StarshipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B02CA8A2473F28700826DC9 /* StarshipTests.swift */; };
+		6B02CA8D2473F29400826DC9 /* VehicleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B02CA8C2473F29400826DC9 /* VehicleTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +34,15 @@
 		6B02B78D246D93E3008B2A5F /* SWEngineering.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWEngineering.h; sourceTree = "<group>"; };
 		6B02B78E246D93E3008B2A5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B02B793246D93E4008B2A5F /* SWEngineeringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SWEngineeringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B02B798246D93E4008B2A5F /* SWEngineeringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWEngineeringTests.swift; sourceTree = "<group>"; };
 		6B02B79A246D93E4008B2A5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B02CA762473DA2500826DC9 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		6B02CA782473DC2D00826DC9 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		6B02CA7B2473DDC100826DC9 /* SWCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SWCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B02CA822473E25000826DC9 /* FilmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmTests.swift; sourceTree = "<group>"; };
+		6B02CA842473F24A00826DC9 /* Starship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
+		6B02CA862473F25500826DC9 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		6B02CA8A2473F28700826DC9 /* StarshipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipTests.swift; sourceTree = "<group>"; };
+		6B02CA8C2473F29400826DC9 /* VehicleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B02CA7C2473DDC100826DC9 /* SWCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +71,7 @@
 				6B02B78C246D93E3008B2A5F /* SWEngineering */,
 				6B02B797246D93E4008B2A5F /* SWEngineeringTests */,
 				6B02B78B246D93E3008B2A5F /* Products */,
+				6B02CA7A2473DDC100826DC9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +89,10 @@
 			children = (
 				6B02B78D246D93E3008B2A5F /* SWEngineering.h */,
 				6B02B78E246D93E3008B2A5F /* Info.plist */,
+				6B02CA762473DA2500826DC9 /* Api.swift */,
+				6B02CA782473DC2D00826DC9 /* Film.swift */,
+				6B02CA842473F24A00826DC9 /* Starship.swift */,
+				6B02CA862473F25500826DC9 /* Vehicle.swift */,
 			);
 			path = SWEngineering;
 			sourceTree = "<group>";
@@ -80,10 +100,20 @@
 		6B02B797246D93E4008B2A5F /* SWEngineeringTests */ = {
 			isa = PBXGroup;
 			children = (
-				6B02B798246D93E4008B2A5F /* SWEngineeringTests.swift */,
 				6B02B79A246D93E4008B2A5F /* Info.plist */,
+				6B02CA822473E25000826DC9 /* FilmTests.swift */,
+				6B02CA8A2473F28700826DC9 /* StarshipTests.swift */,
+				6B02CA8C2473F29400826DC9 /* VehicleTests.swift */,
 			);
 			path = SWEngineeringTests;
+			sourceTree = "<group>";
+		};
+		6B02CA7A2473DDC100826DC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B02CA7B2473DDC100826DC9 /* SWCore.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +178,7 @@
 				TargetAttributes = {
 					6B02B789246D93E3008B2A5F = {
 						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
 					};
 					6B02B792246D93E4008B2A5F = {
 						CreatedOnToolsVersion = 11.4.1;
@@ -195,6 +226,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B02CA872473F25500826DC9 /* Vehicle.swift in Sources */,
+				6B02CA852473F24A00826DC9 /* Starship.swift in Sources */,
+				6B02CA772473DA2500826DC9 /* Api.swift in Sources */,
+				6B02CA792473DC2D00826DC9 /* Film.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +237,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B02B799246D93E4008B2A5F /* SWEngineeringTests.swift in Sources */,
+				6B02CA832473E25000826DC9 /* FilmTests.swift in Sources */,
+				6B02CA8B2473F28700826DC9 /* StarshipTests.swift in Sources */,
+				6B02CA8D2473F29400826DC9 /* VehicleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +305,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -325,7 +362,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -340,6 +377,7 @@
 		6B02B79F246D93E4008B2A5F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 52QHD847TQ;
@@ -356,6 +394,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.oraclecorp.internal.SWEngineering;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +403,7 @@
 		6B02B7A0246D93E4008B2A5F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 52QHD847TQ;
@@ -388,6 +428,7 @@
 		6B02B7A2246D93E4008B2A5F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 52QHD847TQ;
 				INFOPLIST_FILE = SWEngineeringTests/Info.plist;
@@ -406,6 +447,7 @@
 		6B02B7A3246D93E4008B2A5F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 52QHD847TQ;
 				INFOPLIST_FILE = SWEngineeringTests/Info.plist;

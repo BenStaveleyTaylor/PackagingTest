@@ -12,17 +12,17 @@ import Foundation
 
 public struct CorePlanet: Codable {
 
-    let name: String
-    let rotationPeriod: String           // JSON: rotation_period
-    let orbitalPeriod: String           // JSON: orbital_period
-    let diameter: String
-    let climate: String
-    let gravity: String
-    let terrain: String
-    let surfaceWater: String            // JSON: surface_water
-    let population: String
-    let residents:  [URL]?
-    let films: [URL]?
+    public let name: String
+    public let rotationPeriod: String           // JSON: rotation_period
+    public let orbitalPeriod: String           // JSON: orbital_period
+    public let diameter: String
+    public let climate: String
+    public let gravity: String
+    public let terrain: String
+    public let surfaceWater: String            // JSON: surface_water
+    public let population: String
+    public let residents:  [URL]?
+    public let films: [URL]?
     // Not modelling: created
     // Not modelling: edited
     // Not modelling: url

@@ -26,32 +26,26 @@ internal struct Network {
 
         let session = self.session()
 
-        session.dataTask(with: request) { data, response, taskError in
+        session.dataTask(with: request) { data, response, error in
 
-            var finalError: Error?
-
-            if taskError != nil {
-                finalError = taskError
-            }
-            else if let data = data {
-
-                print("Response: \(String(data: data, encoding: .utf8)!)")
-
-                let decoder = Utils.commonJsonDecoder()
-
-                do {
-                    let object = try decoder.decode(T.self, from: data)
-                    completion(.success(object))
-                    return
-                }
-                catch {
-                    finalError = error
-                }
+            if let error = error {
+                completion(.failure(error))
+                return
             }
 
-            // If we got here it's an error
-            completion(.failure(finalError ?? URLError(.unknown)))
+            guard let data = data else {
+                completion(.failure(URLError(.unknown)))
+                return
+            }
 
+            print("Response: \(String(data: data, encoding: .utf8)!)")
+
+            let decoder = Utils.commonJsonDecoder()
+            let object = Result {
+                try decoder.decode(T.self, from: data)
+            }
+
+            completion(object)
         }.resume()
     }
 
@@ -68,20 +62,28 @@ internal struct Network {
 
         session.dataTask(with: request) { data, response, error in
 
-            if let data = data {
-
-                print("Response: \(String(data: data, encoding: .utf8)!)")
-
-                let decoder = Utils.commonJsonDecoder()
-                if let object = try? decoder.decode(CoreContainer.self, from: data) {
-                    completion(.success(object.count))
-                    return
-                }
+            if let error = error {
+                completion(.failure(error))
+                return
             }
 
-            // If we got here it's an error
-            completion(.failure(error ?? URLError(.unknown)))
+            guard let data = data else {
+                completion(.failure(URLError(.unknown)))
+                return
+            }
 
+            print("Response: \(String(data: data, encoding: .utf8)!)")
+
+            let decoder = Utils.commonJsonDecoder()
+            let container = Result {
+                try decoder.decode(CoreContainer.self, from: data)
+            }
+
+            let count = container.map { object in
+                object.count
+            }
+
+            completion(count)
         }.resume()
     }
 
